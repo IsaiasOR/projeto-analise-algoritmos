@@ -1,8 +1,3 @@
-array = [38, 27, 43, 3, 9, 82, 10]
-print("-----------------------------------------------")
-print("Array inicial: ", array)
-print("-----------------------------------------------\n")
-
 def quick_sort(array, left=0, right=None):
     if right is None:
         right = len(array) - 1
@@ -21,10 +16,14 @@ def partition(array, left, right):
         if array[j] <= pivot:
             i += 1
             array[i], array[j] = array[j], array[i]
-            print("Cambio: ", array)
     array[i + 1], array[right] = array[right], array[i + 1]
-    print("Cambio: ", array)
     return i + 1
+
+
+array = [38, 27, 43, 3, 9, 82, 10]
+print("-----------------------------------------------")
+print("Array inicial: ", array)
+print("-----------------------------------------------\n")
 
 result = quick_sort(array)
 print("-----------------------------------------------")
