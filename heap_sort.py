@@ -1,5 +1,3 @@
-vector = [38, 27, 43, 3, 9, 82, 10]
-
 def heap_sort(vector):
     print("Vector original:", vector)
     n = len(vector)
@@ -17,6 +15,7 @@ def sift(vector, size, root):
     largest = root
     left = 2 * root + 1
     right = 2 * root + 2
+
     if left < size and vector[left] > vector[largest]:
         largest = left
 
@@ -27,5 +26,6 @@ def sift(vector, size, root):
         vector[root], vector[largest] = vector[largest], vector[root]
         sift(vector, size, largest)
 
+vector = [38, 27, 43, 3, 9, 82, 10]
 print("------------------ Heapsort ------------------")
 print("Vector ordenado:", heap_sort(vector))
